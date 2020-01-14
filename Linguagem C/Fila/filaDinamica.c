@@ -1,6 +1,6 @@
 /*
 Autor: Fabricio Andrade
-Data: 10/01/19
+Data: 10/01/20
 Algoritmo: Fila Dinamica/Ligada/encadeada
 Obs1: Não são utilizados comandos de limpar tela
 para evitar problemas com diferentes SO's
