@@ -1,6 +1,6 @@
 /*
 Autor: Fabricio Andrade
-Data: 11/01/19
+Data: 11/01/20
 Algoritmo: Arvore AVL 
 Obs1: Não são utilizados comandos de limpar tela
 para evitar problemas com diferentes SO's
