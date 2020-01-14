@@ -1,6 +1,6 @@
 /*
 Autor: Fabricio Andrade
-Data: 10/01/19
+Data: 10/01/20
 Algoritmo: Pilha Estática com tamanho definido pelo programador
 Obs1: Não são utilizados comandos de limpar tela
 para evitar problemas com diferentes SO's
