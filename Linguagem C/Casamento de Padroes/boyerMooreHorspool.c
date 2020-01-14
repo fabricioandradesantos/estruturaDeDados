@@ -1,6 +1,6 @@
 /*
 Autor: Fabricio Andrade
-Data: 13/01/19
+Data: 13/01/20
 Algoritmo: Boyer Moore Horspool
 Obs1: Não são utilizados comandos de limpar tela
 para evitar problemas com diferentes SO's
