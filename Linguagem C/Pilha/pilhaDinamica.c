@@ -1,12 +1,12 @@
 /*
 Autor: Fabricio Andrade
-Data: 10/01/19
+Data: 10/01/20
 Algoritmo: Pilha dinamica/ligada/encadeada
-Obs1: N„o s„o utilizados comandos de limpar tela
+Obs1: N√£o s√£o utilizados comandos de limpar tela
 para evitar problemas com diferentes SO's
 Obs2: inserir = push, remover = pop, pesquisar = search, exibir = display.
-Obs3: Note que o tipoPilha È definido como um ponteiro na definiÁ„o da struct
-Obs4: ApÛs o uso da funÁao free o ponteiro È setado com NULL para evitar
+Obs3: Note que o tipoPilha √© definido como um ponteiro na defini√ß√£o da struct
+Obs4: Ap√≥s o uso da fun√ßao free o ponteiro √© setado com NULL para evitar
 "Ponteiros selvagens"
 */
 
