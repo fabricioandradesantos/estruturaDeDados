@@ -1,6 +1,6 @@
 /*
 Autor: Fabricio Andrade
-Data: 12/01/19
+Data: 12/01/20
 Algoritmo: Shell Sort
 Obs1: Não são utilizados comandos de limpar tela
 para evitar problemas com diferentes SO's
