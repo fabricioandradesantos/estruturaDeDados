@@ -1,7 +1,6 @@
 # Algoritmos de Estruturas de Dados
 
-Este repositório disponibiliza alguns algoritmos clássicos em Ciência da Computação. Todos os códigos foram desenvolvidos de forma "didática" e legível com o objetivo de ajudar os discentes, os monitores e os docentes que por sua vez 
-tem que ajudar os alunos e corrigir suas provas práticas. 
+Este repositório disponibiliza alguns algoritmos clássicos em Ciência da Computação. Todos os códigos foram desenvolvidos de forma "didática" e legível com o objetivo de ajudar os discentes e os monitores.
 
 Com o objetivo de encorajar novas pessoas a contribuir com o projeto e assim ajudar mais estudantes, os algoritmos podem ser disponibilizados nas seguintes linguagens: C, C++, Java, Python, Go, Ruby e JavaScript.
 Obs: Para contribuir, seus códigos devem serguir a premissa de serem "didáticos" e legíveis. 
