@@ -1,95 +1,77 @@
-/*
-Autor: Fabricio Andrade
-Data: 12/01/20
-Algoritmo: Quick Sort
-Obs1: Não são utilizados comandos de limpar tela
-para evitar problemas com diferentes SO's
-*/
-
-#include<stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
-// função que realiza a troca entre dois elementos
-void troca(int *vetor, int valor1, int valor2)
+
+void merge(int *vetor, int inicio, int meio, int tamanhoAux)
 {
+	int i, j, k;
+	int n1 = meio - inicio + 1;
+	int n2 = tamanhoAux - meio;
 
-int auxiliar = vetor[valor1];
-vetor[valor1] = vetor[valor2];
-vetor[valor2] = auxiliar;
-
-}
-
-// particionar e retorna o índice do pivô
-int particionar(int *vetor, int inicio, int fim)
-{
-int pivo=0;
-int pivoIndice=0;
-int i=0;
-
-pivo = vetor[fim]; 
-pivoIndice = inicio;
-for(i = inicio; i < fim; i++)
-{
-
-if(vetor[i] <= pivo)
-{
-
-troca(vetor, i, pivoIndice);
-pivoIndice++;
-
-}
-}
-
-// troca o pivô
-troca(vetor, pivoIndice, fim);
-// retorna o índice do pivô
-return pivoIndice;
-}
-// escolhe um pivô aleatório para evitar o pior caso do Quick Sort
-int particionamentoAleatorio(int *vetor, int inicio, int fim)
-{
-// seleciona um número entre fim (inclusive) e inicio (inclusive)
-int pivoIndice = (rand() % (fim - inicio + 1)) + inicio;
-// faz a troca para colocar o pivô no fim
-troca(vetor, pivoIndice, fim);
-
-return particionar(vetor, inicio, fim);
-}
-
-void quickSort(int *vetor, int inicio, int fim)
-{
-if(inicio < fim)
-{
-// função particionarr retorna o índice do pivô
-int pivoIndice = particionamentoAleatorio(vetor, inicio, fim);
-// chamadas recursivas quickSort
-quickSort(vetor, inicio, pivoIndice - 1);
-quickSort(vetor, pivoIndice + 1, fim);
-}
-}
-
-
-int main ()
-{
-
- int vetor[10]={1,3,2,8,3,4,6,5,9,10};
+	int L[n1], R[n2];
  
- int i=0;
+	for (i = 0; i < n1; i++)
+		L[i] = vetor[inicio + i];
+	for (j = 0; j < n2; j++)
+		R[j] = vetor[meio + 1 + j];
 
-printf("\nvetor antes da ordenacao\n");
- for (int i = 0; i < 10; i++)
- {
-   printf("[%d] ",vetor[i]);
- }
+	i = 0;
+	j = 0;
+	k = inicio;
+	
+    while (i < n1 && j < n2) {
+		if (R[j]>= L[i]) {
+			vetor[k] = L[i];
+			i++;
+		}
+		else {
+			vetor[k] = R[j];
+			j++;
+		}
+		k++;
+	}
 
-quickSort(vetor, 0, 9);
+	while (i < n1) {
+		vetor[k] = L[i];
+		i++;
+		k++;
+	}
+	
+    while (j < n2) {
+		vetor[k] = R[j];
+		j++;
+		k++;
+	}
+}
 
-printf("\n\nvetor ordenado\n");
- for (int i = 0; i < 10; i++)
- {
-   printf("[%d] ",vetor[i]);
- }
-getchar();
- return 0;
+void mergeSort(int *vetor, int inicio, int tamanhoAux)
+{
+	if (inicio < tamanhoAux) {
+		
+		// também pode usar (inicio+tamanho)/2 
+		int meio = inicio + (tamanhoAux - inicio) / 2;
 
+		// ordena a primeira e a segunda metades 
+		mergeSort(vetor, inicio, meio);
+		mergeSort(vetor, meio + 1, tamanhoAux);
+		merge(vetor, inicio, meio, tamanhoAux);
+	}
+}
+
+int main() {
+  int vetor[10]={1,3,2,8,3,4,6,5,9,10};
+  
+
+  printf("\nAntes de Ordenar\n");
+  for (int i = 0; i < 10; i++) {
+    printf("VETOR[%d]\n", vetor[i]);
+  }
+
+  mergeSort(vetor, 0, 10 - 1);
+  // bubbleSort(vetor, 10);
+
+  printf("\nOrdenado\n");
+  for (int i = 0; i < 10; i++) {
+    printf("VETOR[%d]\n", vetor[i]);
+  }
 }
